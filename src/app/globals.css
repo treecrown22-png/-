@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Jua&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  /* Quest RPG Variables */
+  --gold: #d4a017;
+  --gold-light: #f0d060;
+  --gold-dark: #8b6914;
+  --parchment: #1a1510;
+  --parchment-light: #2a2218;
+  --parchment-lighter: #3a3228;
+  --panel-bg: rgba(20, 15, 10, 0.95);
+  --panel-border: #5a4a2a;
+  --text: #e8dcc8;
+  --text-dim: #8a7a5a;
+  --text-bright: #fff8e0;
+  --hp-red: #c0392b;
+  --mp-blue: #2980b9;
+  --xp-green: #27ae60;
+  --epic: #9b59b6;
+  --legendary: #e67e22;
+  --rare: #3498db;
+  --danger: #e74c3c;
+  --success: #2ecc71;
+
+  /* Account Book Variables */
+  --primary: #C9A961;
+  --primary-dark: #8B7340;
+  --primary-light: #E8D5A3;
+  --pink: #D4A5A5;
+  --pink-light: #F0D5D5;
+  --blue: #7BA7BC;
+  --blue-light: #B5D4E0;
+  --green: #5A7A5A;
+  --green-light: #8AAA8A;
+  --purple: #8B6F8E;
+  --purple-light: #C4A8C7;
+  --orange: #C4885B;
+  --red: #A0522D;
+  --bg: #0D1117;
+  --bg-card: #161B22;
+  --bg-dark: #080C10;
+  --text-light: #8B8070;
+  --text-white: #FFF8E7;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.7);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+  --gold-glow: 0 0 20px rgba(201, 169, 97, 0.3);
+}
+
+html,
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0d0a06;
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: 4px;
+}
+.gap-2 {
+  gap: 8px;
+}
+.gap-3 {
+  gap: 12px;
+}
+.gap-4 {
+  gap: 16px;
+}
+.text-center {
+  text-align: center;
+}
+.font-bold {
+  font-weight: 700;
+}
+.w-full {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(212, 160, 23, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(212, 160, 23, 0.4);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
